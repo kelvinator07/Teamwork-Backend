@@ -1,0 +1,3 @@
+https://www.smashingmagazine.com/2020/04/express-api-backend-project-postgresql/
+
+install yarn https://classic.yarnpkg.com/en/docs/install
