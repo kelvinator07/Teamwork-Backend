@@ -19,7 +19,6 @@ app.get('/', (req, res) => {
     res.status(200).json({ message: `${welcomeVariable} ${process.env.PORT} ` });
 });
 
-debugger;
 
 app.use('/api/v1', feedRoutes);
 app.use('/api/v1', articleRoutes);
