@@ -1,9 +1,24 @@
 import { expect, server, BASE_URL } from './setup';
 
-describe('Messages', () => {
-  it.skip('get messages page', done => {
+describe('POST /api/v1/auth/signin', () => {
+  const data = {
+    email: 'kelvin@gmail.com',
+    password: 'qwerty',
+  };
+  it.skip('signin should return status code 200', (done) => {
+    request(server)
+      .post('/api/v1/auth/signin')
+      .send(data)
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200, done);
+  });
+});
+
+describe('Articles', () => {
+  it.skip('get articles page', done => {
     server
-      .get(`${BASE_URL}/messages`)
+      .get(`${BASE_URL}/articles`)
       .expect(200)
       .end((err, res) => {
         expect(res.status).to.equal(200);
